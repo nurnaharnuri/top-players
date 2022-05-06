@@ -74,8 +74,7 @@ hr {
 }
 
 .thumbnail img {
-  width: 177px;
-  height: 117px;
+  width: 100%;
 }
 
 .blog-info {
@@ -111,8 +110,7 @@ hr {
 }
 
 .course-banner img {
-  width: 224px;
-  height: 104px;
+  width: 100%;
 }
 
 .course-title {
@@ -156,4 +154,36 @@ hr {
 
 .course-duration .filled {
   color: #ff4a60;
+}
+
+/*==========responsiveness============*/
+
+/*==========mobile devices============*/
+
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .player,
+  .blog {
+    flex-direction: column;
+  }
+}
+
+/*==========tablet devices============*/
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
